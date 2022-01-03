@@ -46,6 +46,7 @@ export default {
       pullUpLoad: this.pullUpLoad,
       observeDOM: true,
       taps: true,
+      scrollY: true,
       // keepAlive: true,
       // mouseWheel: true,
     });

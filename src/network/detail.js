@@ -2,11 +2,16 @@ import { request } from './request';
 
 export function Getdetail(iid) {
   return request({
-    // http://152.136.185.210:7878/api/m5/detail
-    url: '/api/m5/detail',
+    // http://152.136.185.210:7878/api/hy66/detail
+    url: '/api/hy66/detail',
     params: {
       iid,
     },
+  });
+}
+export function getRecommend() {
+  return request({
+    url: '/api/hy66/recommend',
   });
 }
 

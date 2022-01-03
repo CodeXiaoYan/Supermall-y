@@ -93,15 +93,18 @@ export default {
   },
   activated() {
     this.$refs.scroll.refresh();
-
     this.$refs.scroll.scrollTo(0, this.saveY, 0.001);
   },
   deactivated() {
     this.saveY = this.$refs.scroll.getscrolly();
     // console.log(this.saveY);
   },
+
   methods: {
     // 计算轮播图
+    // itemImgLoad() {
+    //   this.$refs.scroll.refresh();
+    // },
     swiperimgload() {
       this.tabOffsettop = this.$refs.tabcontrol2.$el.offsetTop;
     },

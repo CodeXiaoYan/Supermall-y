@@ -17,7 +17,7 @@
     </div>
   </div>
 </template>
-
+x
 <script>
 export default {
   name: "DetailGoodsinfo",
@@ -30,23 +30,23 @@ export default {
     },
     data() {
       return {
-        counter: 0,
-        imageslength: 0,
+        // counter: 0,
+        // imageslength: 0,
       };
     },
   },
   methods: {
     imgload() {
-      if (++this.counter === this.imageslength) {
-        this.$emit("imageload");
-      }
+      // if (++this.counter === this.imageslength) {
+      this.$emit("imageload");
     },
+    // },
   },
-  watch: {
-    detailInfo() {
-      this.imageslength = this.detailInfo.detailImage[0].list.length;
-    },
-  },
+  // watch: {
+  //   detailInfo() {
+  //     this.imageslength = this.detailInfo.detailImage[0].list.length;
+  //   },
+  // },
 };
 </script>
 

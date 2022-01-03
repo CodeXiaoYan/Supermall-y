@@ -31,9 +31,10 @@ export default {
   methods: {
     titleclick(index) {
       this.currentIndex = index;
+      this.$emit("titleclick", index);
     },
     backclick() {
-      this.$router.push("/home/");
+      this.$router.go(-1);
     },
   },
 };
@@ -41,6 +42,7 @@ export default {
 
 <style scoped>
 .title {
+  position: relative;
   display: flex;
 }
 .title-item {

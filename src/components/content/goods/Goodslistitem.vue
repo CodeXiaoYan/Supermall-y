@@ -1,7 +1,7 @@
 <template>
   <div class="goods-item"
        @click="itemclick">
-    <img :src="goodsitem.show.img"
+    <img :src="showimg"
          alt="" />
     <div class="goods-info">
       <p>{{ goodsitem.title }}</p>
@@ -20,11 +20,17 @@ export default {
       },
     },
   },
+  computed: {
+    showimg() {
+      return this.goodsitem.image || this.goodsitem.show.img;
+    },
+  },
   methods: {
-    // imageload() {
-    //   this.$bus.$emit("itemImgLoad");
-    // },
+    imageload() {
+      this.$bus.$emit("itemImgLoad");
+    },
     itemclick() {
+      // let iid = this.goodsitem.iid;
       this.$router.push("/detail/" + this.goodsitem.iid);
     },
   },
